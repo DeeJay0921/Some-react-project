@@ -4,7 +4,7 @@ import foo from './foo';
 function componet() {
     var element = $('<div></div>');
 
-    element.html(_.join(['hello','webpack'],''));
+    element.html(_.join(['hi  ',' webpack'],''));
     // _.join()中的_是lodash暴露的全局变量
 
     return element.get(0);
