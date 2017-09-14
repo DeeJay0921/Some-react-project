@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
+import foo from './foo';
 function componet() {
     var element = $('<div></div>');
 
@@ -9,3 +10,5 @@ function componet() {
     return element.get(0);
 }
 document.body.appendChild(componet());
+console.log(foo);
+console.log(foo());
