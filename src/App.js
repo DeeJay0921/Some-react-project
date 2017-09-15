@@ -3,40 +3,75 @@ import TodoInput from './TodoInput'
 import TodoItem from './TodoItem'
 import 'normalize.css'
 import './reset.css'
-
+import './App.css'
+import './TodoItem.css'
+import './TodoInput.css'
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            newTodo: 'test',
+            newTodo: '',
             todoList: [
-                {id:1,title:'first-todo'},
-                {id:2,title:'second-todo'}
+
             ]
         }
     }
     render() {
-        let todos = this.state.todoList.map( (item,index) => {
+        let todos = this.state.todoList.filter( (item) => !item.deleted).map((item,index) => {
             return (
-                <li>
-                    <TodoItem todo={item}></TodoItem>
+                <li key={index}>
+                    <TodoItem todo={item} onToggle={this.toggle.bind(this)} onDelete={this.delete.bind(this)}></TodoItem>
                 </li>
             )
         })
-
+        console.log({todos});
         return (
           <div className="App">
               <h1>我的待办</h1>
               <div className="inputWrapper">
-                  <TodoInput content={this.state.newTodo}></TodoInput>
+                  <TodoInput content={this.state.newTodo} onSubmit={this.addTo.bind(this)} onChange={this.changeTitle.bind(this)}></TodoInput>
               </div>
-              <ol>
+              <ol className="todoList">
                   {todos}
               </ol>
           </div>
-        );
+        )
+
   }
+    addTo (e) {
+        this.state.todoList.push({
+            id: idMaker(),
+            title: e.target.value,
+            status: null,
+            deleted: false
+        })
+        this.setState({
+            newTodo: '',
+            todoList: this.state.todoList
+        })
+    }
+    changeTitle (e) {
+        this.setState ({
+            newTodo: e.target.value,
+            todoList: this.state.todoList
+        })
+    }
+    toggle(e,todo) {
+        todo.status = todo.status === 'completed' ? '' : 'completed';
+        this.setState(this.state);
+    }
+    delete(e,todo) {
+        todo.deleted = true;
+        this.setState(this.state);
+    }
 }
 
 export default App;
+
+let id = 0;
+
+function idMaker() {
+    id += 1;
+    return id;
+}
