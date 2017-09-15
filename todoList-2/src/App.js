@@ -7,6 +7,14 @@ import './App.css'
 import './TodoItem.css'
 import './TodoInput.css'
 import * as localStore from './localStore'
+import AV from 'leancloud-storage'
+
+const APP_ID = 'AjE16hxJ7FoWt50DIOzIBczg-gzGzoHsz';
+const APP_KEY = 'l8VXWgxndViUnePds1RKBuOi';
+AV.init({
+    appId: APP_ID,
+    appKey: APP_KEY
+})
 
 class App extends Component {
     constructor(props) {
@@ -73,3 +81,4 @@ function idMaker() {
     id += 1;
     return id;
 }
+
