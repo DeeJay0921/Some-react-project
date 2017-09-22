@@ -8,7 +8,9 @@ import './TodoItem.css'
 import './TodoInput.css'
 import leanCloud from './leanCloud'
 import UserDialog from './UserDialog'
-import {getCurrentUser,signOut} from './leanCloud'
+import {getCurrentUser,signOut,TodoModel} from './leanCloud'
+import AV from './leanCloud'
+
 
 class App extends Component {
     constructor(props) {
@@ -18,7 +20,18 @@ class App extends Component {
             newTodo: '',
             TodoList: []
         }
+        let user = getCurrentUser()
+        if (user) {
+            TodoModel.getByUser(user, (todos) => {
+                let stateCopy = JSON.parse(JSON.stringify(this.state))
+                stateCopy.TodoList = todos
+                this.setState(stateCopy)
+            },(error)=> {
+                console.log(error)
+            })
+        }
     }
+
     render() {
         let todos = this.state.TodoList.filter((item) => {
             return !item.deleted;
@@ -30,6 +43,8 @@ class App extends Component {
                 </li>
             )
         })
+        console.log(this.state.TodoList)
+        console.log(todos)
         return (
             <div className="App">
                 <h1>{this.state.user.username || '我'}的待办事项
@@ -56,35 +71,47 @@ class App extends Component {
         this.setState(stateCopy);
     }
     addTo (e) {
-        this.state.TodoList.push({
-            id: idMaker(),
+        let newTodo = {
             title: e.target.value,
-            status: null,
+            status: '',
             deleted: false
-        })
-        this.setState({
-            newTodo: '',
-            TodoList: this.state.TodoList
+        }
+        TodoModel.create(newTodo,(id)=>{
+            newTodo.id = id;
+            console.log('userID: ' + id);
+            this.state.TodoList.push(newTodo);
+            this.setState({
+                newTodo: '',
+                TodoList: this.state.TodoList,
+            })
+        },(error) => {
+            console.log(error);
         })
     }
+
+
     changeTitle(e){
         this.setState({
             newTodo: e.target.value,
             TodoList: this.state.TodoList
         })
     }
-    toggle (e,todoItem) {
-        todoItem.status = todoItem.status === 'completed' ? '' : 'completed';
-        this.setState(this.state)
+    toggle (todo,e) {
+        let oldStatus = todo.status;
+        todo.status = todo.status === 'completed' ? '' : 'completed';
+        TodoModel.update(todo,()=>{
+            this.setState(this.state);
+        },(error)=> {
+            todo.status = oldStatus;
+            this.setState(this.state);
+        })
     }
-    delete (e,todoItem) {
-        todoItem.deleted = true;
-        this.setState(this.state);
+    delete (todo,e) {
+        // console.log(todo.deleted)
+        TodoModel.destroy(todo.id,()=>{
+            todo.deleted = true;
+            this.setState(this.state);
+        })
     }
 }
 export default App;
-let id = 0;
-function idMaker() {
-    id += 1;
-    return id;
-}

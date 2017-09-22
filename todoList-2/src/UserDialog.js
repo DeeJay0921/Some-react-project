@@ -113,6 +113,9 @@ export default class UserDialog extends React.Component {
         stateCopy.selectedTab = 'signUpOrSignIn';
         this.setState(stateCopy);
     }
+    onReload() {
+        window.location.reload();
+    }
     //render
     render () {
         return (
@@ -124,7 +127,8 @@ export default class UserDialog extends React.Component {
                             onSignUp={this.signUp.bind(this)}
                             onSignIn={this.signIn.bind(this)}
                             onChange={this.changeFormDate.bind(this)}
-                            onForgotPassword={this.showForgetPassword.bind(this)}>
+                            onForgotPassword={this.showForgetPassword.bind(this)}
+                            onReload={this.onReload.bind(this)}>
                         </SignUpOrSignIn> :
                         <ForgotPassword
                             formData={this.state.formData}

@@ -12,10 +12,11 @@ class TodoItem extends React.Component {
         )
     }
     toggle(e) {
-        this.props.toggle(e,this.props.todo);
+        this.props.toggle(this.props.todo,e);
     }
     delete(e) {
-        this.props.delete(e,this.props.todo)
+        console.log(1)
+        this.props.delete(this.props.todo,e)
     }
 }
 export default TodoItem;

@@ -32,7 +32,8 @@ export default class SignUpOrSignIn extends React.Component {
                     {this.state.selected === 'signIn' ? <SignInForm formData={this.props.formData}
                                                                     onSubmit={this.props.onSignIn}
                                                                     onChange={this.props.onChange}
-                                                                    onForgotPassword={this.props.onForgotPassword}>
+                                                                    onForgotPassword={this.props.onForgotPassword}
+                                                                    onReload={this.props.onReload}>
                     </SignInForm> : null}
                 </div>
             </div>
