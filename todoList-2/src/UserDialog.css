@@ -1,26 +1,230 @@
+@font-face {
+    font-family: 'iconfont';  /* project id 376300 */
+    src: url('//at.alicdn.com/t/font_376300_07h9in59xmfjq0k9.eot');
+    src: url('//at.alicdn.com/t/font_376300_07h9in59xmfjq0k9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_376300_07h9in59xmfjq0k9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_376300_07h9in59xmfjq0k9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_376300_07h9in59xmfjq0k9.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 18px;
+    font-style: normal;
+}
 .UserDialog-Wrapper{
     /*全屏*/      position: fixed; top: 0; left: 0; bottom: 0; right: 0;
     /*内容居中*/  display: flex; justify-content: center; align-items: center;
-    background: hsla(0,0%,0%,0.40);
+    background: url("https://ooo.0o0.ooo/2017/09/23/59c55110a94d4.jpg") center center no-repeat;
+    background-size: cover;
 }
 .UserDialog{
     border: 1px solid;
     border-radius: 4px;
     min-width: 20em;
-    background: white;
+    background: rgba(224, 220, 252, 0.2);
     border: 1px solid #aaa;
-    box-shadow: 0 0 1em hsla(0,0%,0%,0.35);
+    box-shadow: 0 0 1em rgba(0,0,0,0.5);
 }
-.UserDialog .signInOrSignUp > nav:first-child{ padding: 1em; margin-left: -2em;}
-.UserDialog .signInOrSignUp > nav:first-child label{ margin-left: 2em; cursor: pointer;}
-.UserDialog .signInOrSignUp > .panes { padding: 0 1em 1em; }
-
-.UserDialog .forgotPassword > h3 { padding: 1em; }
-.UserDialog .forgotPassword > form { padding: 0 1em 1em; }
-
-.UserDialog form>.row{ display: flex; padding: .3em 0; }
-.UserDialog form>.row>label:first-child{ width: 4em; }
-.UserDialog form>.row.actions{ padding-left: 4em; display: flex; align-items: center;}
-.UserDialog form>.row.actions button{ margin-right: .5em; }
-
-.UserDialog button{font: inherit; padding: .2em;}
+.UserDialog .onSignUpOrSignIn {
+    position: relative;
+    font-size: 14px;
+    padding: 20px;
+}
+.UserDialog .onSignUpOrSignIn nav {
+    text-align: center;
+}
+.UserDialog .onSignUpOrSignIn nav label {
+    display: inline-block;
+    width: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .5s;
+}
+.UserDialog .onSignUpOrSignIn nav label:hover {
+    color: #88acfe;
+}
+.UserDialog .onSignUpOrSignIn nav label:active {
+    color: #88acfe;
+}
+.UserDialog .onSignUpOrSignIn nav label input {
+    visibility: hidden;
+}
+.UserDialog .onSignUpOrSignIn .panes {
+    margin-top: 20px;
+    text-align: center;;
+}
+/*signIn*/
+.UserDialog .onSignUpOrSignIn .panes .signIn .row {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border: 1px solid #88acfe;
+    border-radius: 21px;
+}
+.UserDialog .onSignUpOrSignIn .panes .signIn .row input {
+    padding: 0 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    height: 40px;
+}
+.UserDialog .onSignUpOrSignIn .panes .signIn .row input::-webkit-input-placeholder {
+    color: #88acfe
+}
+.UserDialog .onSignUpOrSignIn .panes .signIn .row input::-moz-placeholder {
+    color: #88acfe
+}
+.UserDialog .onSignUpOrSignIn .panes .signIn .actions {
+    border: none;
+    width: 60%;
+}
+.UserDialog .onSignUpOrSignIn .panes .signIn .actions button {
+    display: block;
+    width: 80%;
+    background: #88acfe;
+    color: #fff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    outline: none;
+    margin: 0 auto;
+    border-radius: 21px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.UserDialog .onSignUpOrSignIn .panes .signIn .actions button:hover {
+    color: #88acfe;
+    background: transparent;
+    border: 1px solid #88acfe;
+    width: 100%;
+}
+.UserDialog .onSignUpOrSignIn .panes .signIn .actions a {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    color: #90c6fe;
+    text-decoration: none;
+    transition: all .5s;
+}
+.UserDialog .onSignUpOrSignIn .panes .signIn .actions a:hover {
+    color: #447afe;
+}
+/*signUp*/
+.UserDialog .onSignUpOrSignIn .panes .signUp .row {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border: 1px solid #88acfe;
+    border-radius: 21px;
+}
+.UserDialog .onSignUpOrSignIn .panes .signUp .row input {
+    padding: 0 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    height: 40px;
+}
+.UserDialog .onSignUpOrSignIn .panes .signUp .row input::-webkit-input-placeholder {
+    color: #88acfe
+}
+.UserDialog .onSignUpOrSignIn .panes .signUp .row input::-moz-placeholder {
+    color: #88acfe
+}
+.UserDialog .onSignUpOrSignIn .panes .signUp .actions {
+    border: none;
+    width: 60%;
+}
+.UserDialog .onSignUpOrSignIn .panes .signUp .actions button {
+    display: block;
+    width: 80%;
+    background: #88acfe;
+    color: #fff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    outline: none;
+    margin: 0 auto;
+    border-radius: 21px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.UserDialog .onSignUpOrSignIn .panes .signUp .actions button:hover {
+    color: #88acfe;
+    background: transparent;
+    border: 1px solid #88acfe;
+    width: 100%;
+}
+/*forgotPassword*/
+.UserDialog .forgotPassword {
+    position: relative;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+}
+.UserDialog .forgotPassword h3 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    transition: all .5s;
+}
+.UserDialog .forgotPassword h3:hover {
+    color: #88acfe;
+}
+.UserDialog .forgotPassword .forgotPassword .row {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border: 1px solid #88acfe;
+    border-radius: 21px;
+}
+.UserDialog .forgotPassword .forgotPassword .row input {
+    padding: 0 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    height: 40px;
+}
+.UserDialog .forgotPassword .forgotPassword .row input::-webkit-input-placeholder {
+    color: #88acfe
+}
+.UserDialog .forgotPassword .forgotPassword  .row input::-moz-placeholder {
+    color: #88acfe
+}
+.UserDialog .forgotPassword .forgotPassword .actions {
+    border: none;
+    width: 70%;
+}
+.UserDialog .forgotPassword .forgotPassword .actions button {
+    display: block;
+    width: 80%;
+    background: #88acfe;
+    color: #fff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    outline: none;
+    margin: 0 auto;
+    border-radius: 21px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.UserDialog .forgotPassword .forgotPassword .actions button:hover {
+    color: #88acfe;
+    background: transparent;
+    border: 1px solid #88acfe;
+    width: 100%;
+}
+.UserDialog .forgotPassword .forgotPassword .actions a {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    text-decoration: none;
+    color: #88acfe;
+    transition: all .5s;
+}
+.UserDialog .forgotPassword .forgotPassword .actions a:hover {
+    color: #447afe;
+}

@@ -2,16 +2,40 @@
   color: #333;
   border: 1px solid #aaa;
   border-radius: 4px;
-  background: white;
+    background: rgba(252, 226, 185, 0.8);
+  background-size: cover;
   margin: 2em;
   padding: 0 1em;
   min-height: 20em;
   min-width: 32em;
-  box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
+  box-shadow: 0 0 1em;
+    position: relative;
 }
 .App > .todoList> li:nth-child(odd){
   background: #eee;
  }
 .App > .todoList> li:nth-child(even){
    background: transparent;
+}
+.App h1 {
+    font-size: 26px;
+    text-align: center;
+}
+.App h1 button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.App h1 button span {
+    padding: 5px 10px;
+    font-size: 30px;
+    position: absolute;
+    top: 1%;
+    right: 0;
+    color: #fc7471;
+    transition: all .5s;
+    cursor: pointer;
+}
+.App h1 button span:hover {
+    color: #fc2037;
 }

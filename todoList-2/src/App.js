@@ -43,12 +43,10 @@ class App extends Component {
                 </li>
             )
         })
-        console.log(this.state.TodoList)
-        console.log(todos)
         return (
             <div className="App">
                 <h1>{this.state.user.username || '我'}的待办事项
-                    {this.state.user.id ? <button onClick={this.signOut.bind(this)}>登出</button> : null}
+                    {this.state.user.id ? <button onClick={this.signOut.bind(this)}><span className="iconfont">&#xe601;</span></button> : null}
                 </h1>
                 <TodoInput content={this.state.newTodo} onSubmit={this.addTo.bind(this)} onChange={this.changeTitle.bind(this)}></TodoInput>
                 <ol className="TodoList">
@@ -107,7 +105,6 @@ class App extends Component {
         })
     }
     delete (todo,e) {
-        // console.log(todo.deleted)
         TodoModel.destroy(todo.id,()=>{
             todo.deleted = true;
             this.setState(this.state);

@@ -12,7 +12,8 @@ function changeTitle(props,e) {
 }
 export default function (props) {
     return (
-        <div>
+        <div className="TodoInputOuter">
+            <span className="iconfont">&#xe602;</span>
             <input className="TodoInput" type="text" value={props.content}
                    onKeyPress={submit.bind(null,props)} placeholder="输入待办事项，按下Enter添加"
                    onChange={changeTitle.bind(null,props)}/>

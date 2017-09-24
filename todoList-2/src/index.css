@@ -1,8 +1,11 @@
-body{
-  background: #ddd;
-}
+/*body{*/
+  /*background: #ddd;*/
+/*}*/
 #root{
   display: flex;
   justify-content: center;
   min-height: 100vh;
+    background: url('https://i.loli.net/2017/09/24/59c73e76e0468.jpg') center center no-repeat;
+    background-size: cover;
+
 }

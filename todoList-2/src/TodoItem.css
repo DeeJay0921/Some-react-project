@@ -1,3 +1,9 @@
+.TodoList li:nth-child(even) {
+    background: rgba(252, 162, 79, 0.2);
+}
+.TodoList li:nth-child(odd) {
+    background: rgba(252, 132, 211, 0.2);
+}
 .TodoItem{
     padding: .5em;
     display: flex;
@@ -6,4 +12,13 @@
 .TodoItem>.title{
     flex-grow: 1;
     padding: 0 .5em;
+}
+.TodoItem button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .5s;
+}
+.TodoItem button:hover {
+    color: rgba(252, 54, 59, 1)
 }

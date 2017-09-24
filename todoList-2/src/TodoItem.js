@@ -7,7 +7,7 @@ class TodoItem extends React.Component {
                 <input type="checkbox" checked={this.props.todo.status === 'completed'}
                 onChange={this.toggle.bind(this)}/>
                 <span className="title">{this.props.todo.title}</span>
-                <button onClick={this.delete.bind(this)}>Delete</button>
+                <button className="iconfont" onClick={this.delete.bind(this)}>&#xe600;</button>
             </div>
         )
     }
@@ -15,7 +15,6 @@ class TodoItem extends React.Component {
         this.props.toggle(this.props.todo,e);
     }
     delete(e) {
-        console.log(1)
         this.props.delete(this.props.todo,e)
     }
 }
