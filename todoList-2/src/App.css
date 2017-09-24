@@ -22,16 +22,17 @@
     text-align: center;
 }
 .App h1 button{
+    display: inline-block;
     background: transparent;
     border: none;
     outline: none;
-}
-.App h1 button span {
     padding: 5px 10px;
-    font-size: 30px;
     position: absolute;
     top: 1%;
     right: 0;
+}
+.App h1 button span {
+    font-size: 30px;
     color: #fc7471;
     transition: all .5s;
     cursor: pointer;
