@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e510713-e114-4859-b804-2c783fbc9fed" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todoList-1/package.json" afterPath="$PROJECT_DIR$/todoList-1/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todoList-2/package.json" afterPath="$PROJECT_DIR$/todoList-2/package.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-1/build/asset-manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-1/build/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-1/build/service-worker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-1/build/static/css/main.45f0e5e2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-1/build/static/css/main.45f0e5e2.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-1/build/static/js/main.0c5ca942.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-1/build/static/js/main.0c5ca942.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-2/build/static/js/main.afd9a910.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-2/build/static/js/main.afd9a910.js.map" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todoList-2/build/asset-manifest.json" afterPath="$PROJECT_DIR$/todoList-2/build/asset-manifest.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todoList-2/build/index.html" afterPath="$PROJECT_DIR$/todoList-2/build/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todoList-2/build/service-worker.js" afterPath="$PROJECT_DIR$/todoList-2/build/service-worker.js" />
     </list>
     <ignored path="some-react-projects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +41,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
               <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-              <folding />
+              <folding>
+                <marker date="1506416782950" expanded="true" signature="0:247" ph="{&quot;name&quot;: &quot;vue-resume-1&quot;...}" />
+                <marker date="1506416782950" expanded="true" signature="106:169" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -305,15 +318,15 @@
       <workItem from="1506139610366" duration="3685000" />
       <workItem from="1506229226178" duration="7863000" />
       <workItem from="1506414524562" duration="597000" />
-      <workItem from="1506415446874" duration="2426000" />
+      <workItem from="1506415446874" duration="3024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135412000" />
+    <option name="totallyTimeSpent" value="136010000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="0" width="1378" height="744" extended-state="0" />
+    <frame x="49" y="0" width="1378" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -590,7 +603,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
+          <folding>
+            <marker date="1506416782950" expanded="true" signature="0:247" ph="{&quot;name&quot;: &quot;vue-resume-1&quot;...}" />
+            <marker date="1506416782950" expanded="true" signature="106:169" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
