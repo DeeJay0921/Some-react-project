@@ -1,7 +1,7 @@
 const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
-    entry: './src/app.js',
+    entry: './src/index.js',
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname,'./dist')
@@ -28,4 +28,12 @@ module.exports = {
             template: './index.html'
         })
     ],
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
+        }
+    },
+    // devServer: {
+    //     port: 8080
+    // }
 }
