@@ -4,7 +4,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state:　{
-        newTodo: '123',
+        newTodo: '',
         todoList: []
     },
     mutations: {

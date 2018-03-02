@@ -20,6 +20,15 @@ module.exports = {
             {
                 test: /\.vue$/,
                 use: ["vue-loader"]
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {}
+                    }
+                ]
             }
         ]
     },
@@ -33,7 +42,7 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
         }
     },
-    devServer: {
-        port: 8080
-    }
+    // devServer: {
+    //     port: 8080
+    // }
 }
