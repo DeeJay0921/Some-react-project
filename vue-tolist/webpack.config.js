@@ -33,7 +33,7 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
         }
     },
-    // devServer: {
-    //     port: 8080
-    // }
+    devServer: {
+        port: 8080
+    }
 }

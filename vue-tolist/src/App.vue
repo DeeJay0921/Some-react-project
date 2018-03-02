@@ -61,9 +61,19 @@
     body {
         background: #1e1e1e;
     }
+    @media (max-width: 425px) {
+        #app {
+            padding-top: 30%;
+        }
+    }
+    @media (min-width: 426px) {
+        #app {
+            padding-top: 5%;
+        }
+    }
     .wrapper {
         width: 80%;
-        margin-top: 5%;
+        /*margin-top: 5%;*/
         margin-left: auto;
         margin-right: auto;
         border: 1px solid #ccc;
