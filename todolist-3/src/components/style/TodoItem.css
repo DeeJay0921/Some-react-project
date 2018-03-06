@@ -1,0 +1,16 @@
+.TodoItem {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 51px;
+    align-items: center;
+    padding-right: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+.checkAndContent > span {
+    margin-left: 8px;
+}
+.finished {
+    text-decoration-line: line-through;
+    color: #999;
+}

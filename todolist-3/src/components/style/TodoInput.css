@@ -1,0 +1,28 @@
+.TodoInput {
+
+}
+
+.ant-input-affix-wrapper {
+    /*width: 362px;*/
+    height: 38px;
+    margin-bottom: 8px;
+}
+.ant-input {
+    height: 38px;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* WebKit*/
+    font-size: 14px;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 14px;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 14px;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* IE 10+ */
+    font-size: 14px;
+}
