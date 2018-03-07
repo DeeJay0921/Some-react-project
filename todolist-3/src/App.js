@@ -4,6 +4,7 @@ import './App.css';
 import TodoInput from './components/TodoInput'
 import TodoItem from './components/TodoItem'
 import UserDialog from './components/UserDialog'
+import { getCurrentUser,signOut } from './leanCloud'
 
 import {Button} from 'antd';
 
@@ -12,6 +13,7 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            user: getCurrentUser() || {},
             newTodo: '',
             todoList: [
                 {id: 1, title: 'first todo', status: 'completed', deleted: false},
@@ -29,21 +31,25 @@ class App extends Component {
                           key={index}></TodoItem>
             )
         })
+        const isLogined = (<div className="logined">
+            <div className="topInfo">
+                <h1>{this.state.user.username||'我'}的待办</h1>
+                <Button onClick={this.signOut.bind(this)}>LogOut</Button>
+            </div>
+            <div className="inputWrapper">
+                <TodoInput content={this.state.newTodo}
+                           onSubmit={this.addTodo}
+                           onChange={this.change.bind(this)}></TodoInput>
+            </div>
+            <ul>
+                {todos}
+            </ul>
+        </div>)
         return (
             <div className="App">
-                <div className="logined">
-                    <h1>todos</h1>
-                    <div className="inputWrapper">
-                        <TodoInput content={this.state.newTodo}
-                                   onSubmit={this.addTodo}
-                                   onChange={this.change.bind(this)}></TodoInput>
-                    </div>
-                    <ul>
-                        {todos}
-                    </ul>
-                </div>
+                {this.state.user.id ? isLogined : null}
                 <div className="notLogined">
-                    <UserDialog></UserDialog>
+                    {this.state.user.id ? null : <UserDialog onSignUpOrSignIn={this.getUserName.bind(this)}></UserDialog>}
                 </div>
             </div>
         );
@@ -74,6 +80,22 @@ class App extends Component {
         this.setState(this.state)
         console.log(todo)
     }
+
+    //  注册之后拿到用户名
+    getUserName(userInfo) {
+        console.log(userInfo)
+        this.setState({
+            user: userInfo
+        })
+    }
+    // 退出登录
+    signOut(e) {
+        signOut()
+        this.setState({
+            user: {}
+        })
+    }
+
 }
 
 export default App;

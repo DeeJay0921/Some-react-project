@@ -1,6 +1,34 @@
-.UserDialog {
-    width: 500px;
-    height: 300px;
+.UserDialog-Wrapper {
+    /*border: 1px solid red;*/
+    /*width: 420px;*/
+    /*padding: 1em;*/
+}
+
+.UserDialog .title {
     font-family: 'Fredericka the Great', cursive;
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.signUp,.signIn {
+    width: 390px;
+}
+.panes {
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+    border: 1px solid rgba(34,36,38,.15);
+    width: 420px;
+    padding: 1em;
+    border-radius: .28571429rem;
+    position: relative;
+}
+.panes .line {
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+}
+.disappear {
+    display: none;
 }
