@@ -2,7 +2,10 @@ import React, {Component} from 'react'
 import {Form, Icon, Input, Button, Checkbox, message} from 'antd';
 import './style/UserDialog.css'
 import {Shake} from 'reshake'
-import {signUp, signIn} from '../leanCloud'
+import {signUp, signIn,resetPassword} from '../leanCloud'
+import Register from './register'
+import Login from './login'
+import ForgotPassword from './forgetPassword'
 
 const FormItem = Form.Item;
 
@@ -11,10 +14,12 @@ class UserDialog extends Component {
         super(props)
         this.state = {
             isLogin: true,
+            hasForgot: false,
             formData: {
                 username: '',
                 password: '',
-                email: ''
+                email: '',
+                resetEmail: ''
             },
             tips: ''
         }
@@ -22,71 +27,24 @@ class UserDialog extends Component {
 
     render() {
         const {getFieldDecorator} = this.props.form
-        const register = <Form className="signUp"> {/* 注册*/}
-            <FormItem className="row">
-                {getFieldDecorator('userName-register', {
-                    rules: [{required: true, message: '用户名不能为空！'}],
-                })(<Input type="text"
-                          prefix={<Icon type="user"></Icon>}
-                          onChange={this.changeInfo.bind(this, 'username')}
-                          placeholder="用户名" size="large"/>)}
-            </FormItem>
-            <FormItem className="row">
-                {getFieldDecorator('password-register', {
-                    rules: [{required: true, message: '密码不能小于6位'},
-                        {required: true, min: 6, message: '密码不能小于6位'}],
-                })(<Input type="password"
-                          prefix={<Icon type="lock"></Icon>}
-                          onChange={this.changeInfo.bind(this, 'password')}
-                          placeholder="密码"
-                          size="large"/>)}
-            </FormItem>
-            <FormItem className="row">
-                {getFieldDecorator('email-register', {
-                    rules: [{
-                        type: 'email', message: '请输入合法的邮箱地址',
-                    }, {
-                        required: true, message: '请输入合法的邮箱地址',
-                    }],
-                })(<Input type="email"
-                          prefix={<Icon type="mail"></Icon>}
-                          onChange={this.changeInfo.bind(this, 'email')}
-                          placeholder="邮箱"
-                          size="large"/>)}
-            </FormItem>
-            <div className="row actions">
-                <Button type="primary" style={{width: '390px'}}
-                        onClick={this.handleSubmit.bind(this, 'signUp')}>注册</Button>
-            </div>
-        </Form>
-        const login = <Form className="signIn"> {/* 登录*/}
-            <FormItem className="row">
-                {getFieldDecorator('userName-login', {
-                    rules: [{required: true, message: '用户名不能为空！'}],
-                })(<Input type="text"
-                          prefix={<Icon type="user"></Icon>}
-                    // value={this.state.formData.username}
-                          onChange={this.changeInfo.bind(this, 'username')}
-                          placeholder="用户名" size="large"/>)}
-            </FormItem>
-            <FormItem className="row">
-                {getFieldDecorator('password-login', {
-                    rules: [{required: true, min: 6, message: '密码不能小于6位'}],
-                })(<Input type="password"
-                          prefix={<Icon type="lock"></Icon>}
-                          onChange={this.changeInfo.bind(this, 'password')}
-                          placeholder="密码"
-                          size="large"/>)}
-            </FormItem>
-            <div className="row actions">
-                <Button type="primary" style={{width: '390px'}}
-                        onClick={this.handleSubmit.bind(this, 'signIn')}>登录</Button>
-            </div>
-        </Form>
-        let renderPart = this.state.isLogin ? login : register
+        let renderPart
+        if (this.state.isLogin && this.state.hasForgot) {
+            renderPart = <ForgotPassword changeInfo={this.changeInfo.bind(this)}
+                                         resetEmail={this.resetEmail.bind(this)}
+                                         returnToLogin={this.returnToLogin.bind(this)}/>
+        }else if (this.state.isLogin === true ) {
+            renderPart = <Login
+                changeInfo={this.changeInfo.bind(this)}
+                switch={this.switch.bind(this)}
+                toForgetPassword={this.toForgetPassword.bind(this)}
+                handleSubmit={this.handleSubmit.bind(this)}/>
+        }else {
+            renderPart = <Register changeInfo={this.changeInfo.bind(this)}
+                                   switch={this.switch.bind(this)}
+                                   handleSubmit={this.handleSubmit.bind(this)}/>
+        }
         return (
             <div className="UserDialog-Wrapper">
-                <Button onClick={this.alert.bind(this)}>Click to msg</Button>
                 <div className="UserDialog">
                     <Shake className="title"
                            h={0}
@@ -106,11 +64,8 @@ class UserDialog extends Component {
 
                         <div className="line"></div>
 
-                        <nav className="swtichLoginAndRegister">
-                            <Button onClick={this.switch.bind(this, false)}>注册</Button>
-                            <Button onClick={this.switch.bind(this, true)}>登录</Button>
-                        </nav>
                     </div>
+
                 </div>
             </div>
         )
@@ -223,6 +178,25 @@ class UserDialog extends Component {
                 }, this.alert)
                 break
         }
+    }
+
+    // 重置密码
+    resetEmail() {
+        console.log(this.state.formData.resetEmail)
+        let resolve = () => {
+            message.success('发送重置邮件成功！')
+        }
+        resetPassword(this.state.formData.resetEmail,resolve,this.reject.bind(this))
+    }
+
+    //    重置密码之后返回登录
+    returnToLogin() {
+        this.setState({hasForgot: false})
+    }
+
+    //    跳转到忘记密码
+    toForgetPassword() {
+        this.setState({hasForgot: true})
     }
 }
 

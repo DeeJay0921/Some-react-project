@@ -7,7 +7,7 @@ AV.init({appId, appKey});
 export default AV
 
 //注册新用户
-export function signUp(username, password, email, resolve,reject) {
+export function signUp(username, password, email, resolve, reject) {
     var user = new AV.User()
     user.setUsername(username)
     user.setPassword(password)
@@ -20,15 +20,15 @@ export function signUp(username, password, email, resolve,reject) {
             id: loginedUser.id, ...loginedUser.attributes
         }
         resolve(userInfo)
-    },(error) => {
+    }, (error) => {
         reject(error)
     })
     return
 }
 
 // 用户登录
-export function signIn(username, password,resolve,reject) {
-    AV.User.logIn(username, password).then( (user) => {
+export function signIn(username, password, resolve, reject) {
+    AV.User.logIn(username, password).then((user) => {
         let userInfo = {
             id: user.id, ...user.attributes
         }
@@ -39,19 +39,28 @@ export function signIn(username, password,resolve,reject) {
 }
 
 // 进入页面时获取当前用户
-export function getCurrentUser () {
+export function getCurrentUser() {
     let user = AV.User.current()
-    if(user) {
+    if (user) {
         return {
-            id: user.id,...user.attributes
+            id: user.id, ...user.attributes
         }
-    }else {
+    } else {
         return null
     }
 }
 
 // 登出
-export function signOut () {
+export function signOut() {
     AV.User.logOut()
     return
+}
+
+//重置密码
+export function resetPassword (email,resolve,reject) {
+    AV.User.requestPasswordReset(email).then( ()=> {
+        resolve()
+    }, (error) => {
+        reject(error)
+    })
 }
