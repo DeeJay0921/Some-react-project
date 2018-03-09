@@ -4,7 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/vue-tolist/src/App.vue" line="113" mnemonic="5" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e510713-e114-4859-b804-2c783fbc9fed" name="Default" comment="" />
+    <list default="true" id="8e510713-e114-4859-b804-2c783fbc9fed" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todoList-3/.gitignore" afterPath="$PROJECT_DIR$/todoList-3/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todolist-3/README.md" afterPath="$PROJECT_DIR$/todolist-3/README.md" />
+    </list>
     <ignored path="some-react-projects.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,7 +29,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todolist-3/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="387">
@@ -33,6 +37,26 @@
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/todolist-3/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/todolist-3/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -47,16 +71,6 @@
                 <element signature="e#1706#2147#0" expanded="false" />
                 <element signature="n#!!block;n#reject#0;n#UserDialog#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todolist-3/src/components/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -153,8 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/todoList-2/src/testBind.js" />
-        <option value="$PROJECT_DIR$/todoList-2/src/leanCloud.js" />
         <option value="$PROJECT_DIR$/todoList-2/src/SignInForm.js" />
         <option value="$PROJECT_DIR$/todoList-2/src/SignUpForm.js" />
         <option value="$PROJECT_DIR$/todoList-2/src/ForgotPassword.js" />
@@ -204,6 +216,8 @@
         <option value="$PROJECT_DIR$/todolist-3/src/components/style/TodoItem.css" />
         <option value="$PROJECT_DIR$/todolist-3/src/components/TodoItem.js" />
         <option value="$PROJECT_DIR$/todolist-3/src/App.js" />
+        <option value="$PROJECT_DIR$/todolist-3/.gitignore" />
+        <option value="$PROJECT_DIR$/todolist-3/README.md" />
       </list>
     </option>
   </component>
@@ -259,33 +273,6 @@
               <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="some-projects" type="462c0819:PsiDirectoryNode" />
               <item name="todolist-3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="some-projects" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist-3" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="some-projects" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="some-projects" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="some-projects" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -420,17 +407,18 @@
       <workItem from="1520356797376" duration="27523000" />
       <workItem from="1520410735292" duration="15299000" />
       <workItem from="1520490542871" duration="6198000" />
-      <workItem from="1520584033545" duration="14271000" />
+      <workItem from="1520584033545" duration="14468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230109000" />
+    <option name="totallyTimeSpent" value="230306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114583336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114583336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -652,20 +640,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/todolist-3/src/App.test.js" />
-    <entry file="file://$PROJECT_DIR$/todolist-3/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todolist-3/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todolist-3/src/components/style/TodoInput.scss" />
     <entry file="file://$PROJECT_DIR$/todolist-3/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -828,6 +802,22 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todolist-3/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todolist-3/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
