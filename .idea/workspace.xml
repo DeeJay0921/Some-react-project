@@ -5,41 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e510713-e114-4859-b804-2c783fbc9fed" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/build/asset-manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/build/bounce.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/build/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/build/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/build/manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/build/service-worker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/build/static/css/main.f5660f85.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/build/static/css/main.f5660f85.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/package-lock.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/public/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/public/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/public/manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/src/App.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/src/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/src/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todoList-3/src/registerServiceWorker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/build/static/js/main.78d26587.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/build/static/js/main.78d26587.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/config-overrides.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/public/bounce.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/src/App.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/src/components/TodoInput.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/src/components/TodoItem.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/src/components/UserDialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/src/components/forgetPassword.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/src/components/login.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/src/components/register.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/src/components/style/TodoInput.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/src/components/style/TodoItem.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/src/components/style/UserDialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/src/leanCloud.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/react-todo/build/asset-manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/react-todo/build/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/react-todo/build/service-worker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/react-todo/build/static/css/main.f5660f85.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/react-todo/build/static/css/main.f5660f85.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/react-todo/build/static/js/main.78d26587.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/react-todo/build/static/js/main.78d26587.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react-todo/package.json" afterPath="$PROJECT_DIR$/react-todo/package.json" />
     </list>
     <ignored path="some-react-projects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,8 +38,18 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/todoList-2/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="75" />
+            <state relative-caret-position="475">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react-todo/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="625">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,7 +83,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/todoList-2/src/SignInForm.js" />
         <option value="$PROJECT_DIR$/todoList-2/src/SignUpForm.js" />
         <option value="$PROJECT_DIR$/todoList-2/src/ForgotPassword.js" />
         <option value="$PROJECT_DIR$/todoList-2/src/UserDialog.js" />
@@ -111,7 +94,6 @@
         <option value="$PROJECT_DIR$/todoList-2/src/TodoItem.css" />
         <option value="$PROJECT_DIR$/todoList-2/src/App.css" />
         <option value="$PROJECT_DIR$/vue-resume-1/package.json" />
-        <option value="$PROJECT_DIR$/todoList-2/package.json" />
         <option value="$PROJECT_DIR$/todoList-1/package.json" />
         <option value="$PROJECT_DIR$/todoList-2/src/UserDialog.css" />
         <option value="$PROJECT_DIR$/todoList-2/src/index.css" />
@@ -150,6 +132,8 @@
         <option value="$PROJECT_DIR$/todolist-3/.gitignore" />
         <option value="$PROJECT_DIR$/todolist-3/README.md" />
         <option value="$PROJECT_DIR$/todolist-3/package.json" />
+        <option value="$PROJECT_DIR$/react-todo/package.json" />
+        <option value="$PROJECT_DIR$/todoList-2/package.json" />
       </list>
     </option>
   </component>
@@ -200,11 +184,6 @@
             <path>
               <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="some-projects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="some-projects" type="462c0819:PsiDirectoryNode" />
-              <item name="react-todo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -339,12 +318,12 @@
       <workItem from="1520410735292" duration="15299000" />
       <workItem from="1520490542871" duration="6198000" />
       <workItem from="1520584033545" duration="15404000" />
-      <workItem from="1520618229358" duration="13000" />
+      <workItem from="1520618229358" duration="163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231255000" />
+    <option name="totallyTimeSpent" value="231405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -408,13 +387,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/todoList-2/src/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todoList-2/src/TodoInput.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -727,10 +699,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/react-todo/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/todoList-2/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="75" />
+        <state relative-caret-position="475">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
