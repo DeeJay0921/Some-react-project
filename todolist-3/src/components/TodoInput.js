@@ -31,7 +31,11 @@ class TodoInput extends React.Component {
     }
 
     changeTitle(e) {
-        this.props.onChange(e)
+        if(e.target.value.trim() === '') { //为空return
+            return
+        }else {
+            this.props.onChange(e)
+        }
     }
 }
 

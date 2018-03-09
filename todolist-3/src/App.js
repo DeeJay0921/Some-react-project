@@ -4,7 +4,7 @@ import './App.css';
 import TodoInput from './components/TodoInput'
 import TodoItem from './components/TodoItem'
 import UserDialog from './components/UserDialog'
-import { getCurrentUser,signOut } from './leanCloud'
+import { getCurrentUser,signOut,TodoModel } from './leanCloud'
 
 import {Button} from 'antd';
 
