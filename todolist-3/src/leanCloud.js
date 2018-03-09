@@ -70,8 +70,10 @@ export const TodoModel = {
     getByUser(user, resolve, reject) { // 查询所有todo
         let query = new AV.Query('Todo')
         query.find().then((todos) => {
-            console.log(todos)
-            // resolve(todos)
+            let arr = todos.map( (item) => {
+                return {id: item.id, ...item.attributes}
+            } )
+            resolve(arr)
         })
     },
     create({status, title, deleted}, resolve, reject) { // 存储todo
@@ -85,6 +87,7 @@ export const TodoModel = {
         var acl = new AV.ACL();
         acl.setPublicReadAccess(false); //不是所有人都可读  只能当前用户读取
         acl.setWriteAccess(AV.User.current(),true); // 当前用户可写
+        acl.setReadAccess(AV.User.current(), true)// 当前用户可读
 
         todo.setACL(acl); // 给当前class应用这个权限
         todo.save().then((response) => {
@@ -109,7 +112,6 @@ export const TodoModel = {
     destory(todoId, resolve, reject) { // 删除todo
         let todo = AV.Object.createWithoutData('Todo', todoId)
         todo.destroy().then(function (response) {
-            console.log(response)
             resolve(response)
         }, function (error) {
             reject(error)

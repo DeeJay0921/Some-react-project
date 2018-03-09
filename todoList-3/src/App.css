@@ -17,3 +17,17 @@ ul {
   background: #fff;
   text-align: center;
 }
+.title {
+  font-family: 'Kalam', cursive;
+  font-size: 14px;
+}
+.anticon-logout:hover {
+  color: #000;
+}
+.topInfo {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}

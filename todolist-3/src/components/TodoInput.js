@@ -5,7 +5,6 @@ import {Input, Icon} from 'antd'
 class TodoInput extends React.Component {
     constructor(props) {
         super(props)
-        console.log(props)
     }
 
     render() {

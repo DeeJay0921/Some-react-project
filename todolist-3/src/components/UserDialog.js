@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Form, Icon, Input, Button, Checkbox, message} from 'antd';
+import {Form, message} from 'antd';
 import './style/UserDialog.css'
 import {Shake} from 'reshake'
 import {signUp, signIn,resetPassword} from '../leanCloud'
@@ -7,7 +7,6 @@ import Register from './register'
 import Login from './login'
 import ForgotPassword from './forgetPassword'
 
-const FormItem = Form.Item;
 
 class UserDialog extends Component {
     constructor(props) {
@@ -26,7 +25,6 @@ class UserDialog extends Component {
     }
 
     render() {
-        const {getFieldDecorator} = this.props.form
         let renderPart
         if (this.state.isLogin && this.state.hasForgot) {
             renderPart = <ForgotPassword changeInfo={this.changeInfo.bind(this)}
@@ -83,7 +81,7 @@ class UserDialog extends Component {
         if (type === 'signUp') {
             this.signUp(this.state)
         } else {
-            this.signIn(this.state)
+            this.signIn(this.state,this.props.getAllTodoList)
         }
 
     }

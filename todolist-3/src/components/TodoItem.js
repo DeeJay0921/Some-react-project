@@ -19,7 +19,7 @@ export default class TodoItem extends React.Component {
                               checked={this.props.todo.status === 'completed'}/>
                     <span className={this.props.todo.status === 'completed' ? 'finished' : ''}>{this.props.todo.title}</span>
                 </div>
-                <Icon type="delete" onClick={this.props.onDelete.bind(null, this.props.todo)}/>
+                <Icon type="delete" onClick={this.props.onDelete.bind(null, this.props.todo)} style={{fontSize: '18px',cursor:'pointer'}}/>
             </div>
         )
     }
