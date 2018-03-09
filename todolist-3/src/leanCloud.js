@@ -33,6 +33,7 @@ export function signIn(username, password, resolve, reject) {
             id: user.id, ...user.attributes
         }
         resolve(userInfo)
+        window.location.reload()
     }, (error) => {
         reject(error)
     })

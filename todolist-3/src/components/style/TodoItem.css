@@ -14,7 +14,17 @@
     text-decoration-line: line-through;
     color: #999;
 }
-@keyframes add-item {
-    0% {}
-    100% {}
-}
+/*@keyframes add-item {*/
+    /*0% { position: relative; right: 0;}*/
+    /*50% {*/
+        /*position: relative;*/
+        /*right: 2%;*/
+        /*opacity: 0.5;*/
+    /*}*/
+    /*100% {*/
+        /*position: relative; right: 0;*/
+    /*}*/
+/*}*/
+/*.delete {*/
+    /*animation: add-item .5s ease;*/
+/*}*/

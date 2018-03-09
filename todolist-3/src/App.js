@@ -18,7 +18,8 @@ class App extends Component {
             todoList: [],
             hasFinished: 0,
             visible: false,
-            confirmLoading: false
+            confirmLoading: false,
+            act: false
         }
         this.getAllTodoList()
     }
@@ -29,7 +30,8 @@ class App extends Component {
                 <TodoItem todo={item}
                           onDelete={this.delete.bind(this)}
                           onToggle={this.toggle.bind(this)}
-                          key={index}></TodoItem>
+                          key={index}
+                          ></TodoItem>
             )
         })
         const isLogined = (<div className="logined">
