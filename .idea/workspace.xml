@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e510713-e114-4859-b804-2c783fbc9fed" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todoList-3/package.json" afterPath="$PROJECT_DIR$/todoList-3/package.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/build/static/js/main.b269d6e7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todolist-3/build/static/js/main.b269d6e7.js.map" afterPath="" />
     </list>
     <ignored path="some-react-projects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +31,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/todolist-3/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="575">
+              <caret line="23" column="63" lean-forward="false" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -235,7 +235,7 @@
     <handled-path value="$PROJECT_DIR$/todolist-3/node_modules" />
     <handled-path value="$PROJECT_DIR$/vue-tolist/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="374" />
     <option name="y" value="144" />
     <option name="width" value="1336" />
@@ -265,11 +265,6 @@
             <path>
               <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="some-projects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="some-projects" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist-3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -404,17 +399,18 @@
       <workItem from="1520356797376" duration="27523000" />
       <workItem from="1520410735292" duration="15299000" />
       <workItem from="1520490542871" duration="6198000" />
-      <workItem from="1520584033545" duration="14734000" />
+      <workItem from="1520584033545" duration="14951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230572000" />
+    <option name="totallyTimeSpent" value="230789000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114583336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114583336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -819,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/todolist-3/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="575">
+          <caret line="23" column="63" lean-forward="false" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
           <folding />
         </state>
       </provider>
