@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .main{
+            width: 808px;
+            margin: 50px auto;
+            background: gray;
+            min-height: 544px;
+            position: relative;
+        }
+        .content{
+            width: 408px;
+            margin: 0 auto;
+            height:408px;
+            border: 2px solid green;
+            background-color: white;
+            position: relative;
+            top:0;
+            overflow: hidden;
+        }
+        #inner{
+            position: relative;
+            top:-102px;
+        }
+        .item{
+            height: 102px;
+        }
+        .item *{
+            float: left;
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            border: 1px solid black;
+        }
+        .black{
+            background-color: black;
+        }
+
+        h3{
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        h3 span{
+            color:brown;
+        }
+        .hide{
+            display: none;
+        }
+
+        .shadow{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            background-color: gray;
+            opacity: 0.6;
+        }
+        .alert-box{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            left: 50%;
+            top:50%;
+            margin-left: -150px;
+            margin-top: -150px;
+            background-color: white;
+        }
+        .alert-box .game-over{
+            padding: 30px 20px;
+        }
+        .alert-box .btn{
+            width: 150px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+        .main .btn .container{
+            width: 150px;
+            margin: 20px auto;
+        }
+        button{
+            cursor: pointer;
+            border: 0;
+            display: inline-block;
+            width: 70px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main">
+    <h3>Score:<span id="score">0</span></h3>
+    <div id="content" class="content">
+        <div id="inner"></div>
+    </div>
+    <div class="btn">
+        <div class="container">
+            <button id="begin">开始</button>
+            <button id="stop">暂停</button>
+        </div>
+    </div>
+
+    <div class="shadow hide"></div>
+    <div class="alert-box hide">
+        <div class="game-over">
+            <img style="opacity: 0.8;width:100%;" src="http://www.popoptiq.com/wp-content/uploads/2013/06/Game-Over.png">
+        </div>
+        <div class="btn">
+            <button id="again">重新开始</button>
+            <button id="back">返回</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    function Init(){
+        bindStart();
+        bindStop();
+        bindClick();
+    }
+    function insertDiv() {
+        var rand = Math.floor(Math.random() * 4);　　　　　　　　// 生成一个0到3 的随机数，用来作为判断生成黑块的位置
+        $("#inner").prepend("<div class='item'></div>");
+        $.each([0, 1, 2, 3], function (k, v) {
+            if (v == rand) {
+                $("#inner .item").first().append("<div class='black col'></div>");
+            } else {
+                $("#inner .item").first().append("<div class='col'></div>");
+            }
+        })
+    }
+    function init() {　　　　　　　　　　　　　　　　// 初始生成4*4的div
+        $.each([0, 1, 2, 3], function () {
+            insertDiv();
+        });
+    }
+    function move() {
+        var ctop = parseInt($("#inner").offset().top);
+
+        ctop += window.globalSpeed;　　　　　　　　　　　　// 自定义的全局变量， 每次下落偏移的距离
+        $("#inner").offset({top: ctop});
+        if (ctop >= 114) {
+            insertDiv();
+            $("#inner").offset({top: 12}); 　　　　　　 // 刚好移动一个item后在上移一个item
+            // delDiv();
+        }
+    }
+    function bindStart() {
+        $("#begin").mouseover(function () {
+            $(this).css("cursor", 'pointer');
+        }).click(function () {
+            if(window.globalIsClearT1){　　  　　　　// 自定义的全局变量，看定时器是否清楚
+
+            }else {
+                clearInterval(window.globalT1); 　　//没有清除的话，先清除，避免两次按下开始按钮
+            }
+            window.globalSpeed = 5;
+            window.globalT1 = setInterval(move, 30);
+            window.globalStartClick = true;　　　　　　//全局变量，是否开始标志位，只有开始了，才能点击
+            init();
+            move();
+        })
+    }
+
+    function bindStop() {
+        $("#stop").mouseover(function () {
+            $(this).css("cursor", 'pointer');
+        }).click(function () {
+            clearInterval(window.globalT1);
+            window.globalStartClick = false;
+            window.globalIsClearT1 = true;
+        })
+    }
+    function bindClick() {
+        $("#inner").click(function (e) {
+            if (window.globalStartClick) {
+                var current = $(e.target);
+                if (current.hasClass("black")) {
+                    current.removeClass("black");
+                    score();
+                } else {
+                    gameOver();
+                }
+            }
+        });
+    }
+    function score() {
+        var score = parseInt($("#score").text());
+        if(score%10 == 0){
+            window.globalSpeed += 1;               //得到一定的分数后就自动加速
+            console.log(1)
+        }
+        $("#score").text(score + 1);
+    }
+    function gameOver() {
+        //暂停游戏，显示模态框
+        $("#stop").trigger('click');
+        window.globalIsClearT1 = true;
+        $(".shadow").removeClass('hide').next().removeClass('hide');
+        $("#again").click(function () {
+            clearInterval(window.globalT1);
+            $(".shadow").addClass('hide').next().addClass('hide');
+            $("#score").text(0);
+            $("#inner").empty();
+            init();
+            $("#begin").trigger('click');
+            // window.globalT1 = setInterval(move, 30)
+        });
+    }
+    Init()
+</script>
+
+</body>
+</html>
